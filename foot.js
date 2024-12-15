@@ -1,12 +1,12 @@
 (function(){
 
-	//´æ´¢ËùÓĞmeshµÄÊı×é
+	//å­˜å‚¨æ‰€æœ‰meshçš„æ•°ç»„
 	var mesh_arr = [];
-	//Ğı×ªÖĞĞÄ
+	//æ—‹è½¬ä¸­å¿ƒ
 	var pivot = new THREE.Object3D();
 	var sphere = new THREE.Mesh(
 		new THREE.SphereGeometry(1,1),                //width,height,depth
-		new THREE.MeshLambertMaterial({color: 0xff00ff}) //²ÄÖÊÉè¶¨
+		new THREE.MeshLambertMaterial({color: 0xff00ff}) //æè´¨è®¾å®š
 	);
 	
 	var SCREEN_WIDTH = window.innerWidth;
@@ -221,7 +221,7 @@
 		morph.scale.set( s, s, s );
 
 		//morph.position.set( x, 0, z );
-		morph.position.set( x, -149.5544394, z);
+		morph.position.set( x, -49.5544394, z);
 		//morph.rotation.y = THREE.Math.randFloat( -0.25, 0.25 );
 
 		//morph.matrixAutoUpdate = false;
@@ -325,7 +325,7 @@
 	function addController(){
 		var loading = document.getElementById("loading");
 		loading.parentNode.removeChild( loading);
-		//²Ù×İ°´Å¥
+		//æ“çºµæŒ‰é’®
 		var btns = document.getElementById("controller").getElementsByTagName("span");
 		btns[ 0].addEventListener( "click", function(){
 			//morph.position.y += 50;
@@ -357,7 +357,7 @@
 			camera.position.z += 50;
 		}, false);
 		
-		//Êó±êÍÏ×§
+		//é¼ æ ‡æ‹–æ‹½
 		var mousedown = false;
 		var startX, startY;
 		container.addEventListener( "mousedown", function( event){
@@ -382,7 +382,7 @@
 			mousedown = false;
 		}, false);
 		
-		//¹ö¶¯·Å´óËõĞ¡
+		//æ»šåŠ¨æ”¾å¤§ç¼©å°
 		var wheelHandler = function( event){
 			var delta = 0;  
 			if (!event) /* For IE. */  
@@ -406,7 +406,7 @@
 		container.addEventListener('DOMMouseScroll', wheelHandler, false);
 		container.onmousewheel = wheelHandler;
 		
-		//ÍÏ¶¯µ÷½ÚÍ¸Ã÷¶È
+		//æ‹–åŠ¨è°ƒèŠ‚é€æ˜åº¦
 		var layer_btn = document.getElementById( "layer_btn");
 		var layer_btn_drag = false;
 		var layer_btn_startY;
@@ -433,7 +433,7 @@
 			layer_btn_drag = false;
 		}, false);
 		
-		//ÍÏ¶¯µ÷½Ú¶¯»­
+		//æ‹–åŠ¨è°ƒèŠ‚åŠ¨ç”»
 		var animation_btn = document.getElementById( "animation_btn");
 		var animation_btn_drag = false;
 		var animation_btn_startY;
